@@ -45,7 +45,7 @@ export const PERSONAL_INFO = {
   specialization: "Finance and Marketing",
   email: "anshig781@gmail.com",
   linkedin: "https://linkedin.com/in/YOUR_LINKEDIN_USERNAME",
-  github: "https://github.com/YOUR_GITHUB_USERNAME",
+  github: "https://github.com/anshig781-maker",
   objective:
     "A BBA student specializing in Finance and Marketing, seeking opportunities to apply academic knowledge in financial documentation, MS Excel, business research, and marketing. Experienced in CA-firm office administration, KYC documentation, and teamwork through national-level business competitions.",
   aboutText: [

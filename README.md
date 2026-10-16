@@ -55,9 +55,9 @@ You can host this website completely **FREE** on GitHub Pages without buying a d
 
 ### Step 1: Create a GitHub Repository
 
-1. Go to [github.com](https://github.com) and log in to your account.
+1. Go to [github.com/anshig781-maker](https://github.com/anshig781-maker) and make sure you are logged in.
 2. Click the **+** (plus) icon in the top right corner and select **New repository**.
-3. Name your repository (e.g., `portfolio` or `aanshi-gupta-portfolio`).
+3. Name your repository `portfolio` (or `anshig781-maker.github.io` if you want it as your primary GitHub user site).
 4. Set the visibility to **Public**.
 5. Leave "Add a README file" **unchecked** (we already have a complete one).
 6. Click **Create repository**.
@@ -65,13 +65,7 @@ You can host this website completely **FREE** on GitHub Pages without buying a d
 ### Step 2: Configure the Base Path in `vite.config.ts`
 
 Open `vite.config.ts`:
-By default, `base: process.env.VITE_BASE_PATH || './'` is already configured for relative paths, which works automatically on GitHub Pages.
-
-If your GitHub repository is named `portfolio` and you prefer an absolute base path, set:
-```typescript
-base: '/portfolio/',
-```
-*(Replace `portfolio` with your exact repository name).*
+By default, `base: process.env.VITE_BASE_PATH || './'` is already configured for relative paths, which automatically works out-of-the-box on GitHub Pages without any edits!
 
 ### Step 3: Push Your Files to GitHub
 
@@ -91,22 +85,22 @@ git commit -m "feat: complete Aanshi Gupta portfolio website"
 git branch -M main
 
 # 5. Connect to your GitHub repository
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
+git remote add origin https://github.com/anshig781-maker/portfolio.git
 
 # 6. Push code to GitHub
 git push -u origin main
 ```
-*(Replace `YOUR_GITHUB_USERNAME` and `YOUR_REPOSITORY_NAME` with your actual GitHub username and repository name).*
+*(If you named your repo something other than `portfolio`, replace `portfolio` with your chosen repository name).*
 
 ### Step 4: Enable GitHub Pages with GitHub Actions
 
-1. Open your repository on GitHub.
-2. Click **Settings** (gear icon at the top).
+1. Open your repository at `https://github.com/anshig781-maker/portfolio`.
+2. Click **Settings** (gear icon at the top right).
 3. In the left sidebar, click **Pages**.
 4. Under **Build and deployment** → **Source**, change from *Deploy from a branch* to **GitHub Actions**.
-5. That's it! GitHub will automatically trigger the included workflow (`.github/workflows/deploy.yml`).
+5. That's it! GitHub Actions will immediately pick up the pre-configured `.github/workflows/deploy.yml` workflow.
 6. Within 1–2 minutes, your website will be live at:
-   `https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY_NAME/`
+   `https://anshig781-maker.github.io/portfolio/`
 
 ---
 

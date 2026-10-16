@@ -22,33 +22,33 @@ export const DeploymentGuideModal: React.FC<DeploymentGuideModalProps> = ({ isOp
       id: 'step1',
       title: '1. Create a New Repository on GitHub',
       content:
-        'Log into GitHub.com, click the "+" icon in the top right, and choose "New repository". Name it (e.g., `portfolio` or `aanshi-gupta-portfolio`). Choose "Public", do NOT initialize with README (we already have a complete one), and click "Create repository".',
+        'Log into GitHub as anshig781-maker, click "+", select "New repository", name it "portfolio" (or "anshig781-maker.github.io"), keep it Public, and leave README unchecked.',
       code: null,
     },
     {
       id: 'step2',
-      title: '2. Set Your Repository Name in vite.config.ts',
+      title: '2. Configured for anshig781-maker Out-of-the-Box',
       content:
-        'In `vite.config.ts`, update the `base` property to match your repo name. For example, if your repository is named `portfolio` on GitHub:',
-      code: `// In vite.config.ts:
-base: process.env.NODE_ENV === 'production' ? '/portfolio/' : '/',`,
+        'Your vite.config.ts is pre-configured with base: process.env.VITE_BASE_PATH || \'./\', which means relative asset links automatically work perfectly on GitHub Pages regardless of repository name!',
+      code: `// vite.config.ts is already configured:
+base: process.env.VITE_BASE_PATH || './',`,
     },
     {
       id: 'step3',
-      title: '3. Push Your Code to GitHub',
-      content: 'Run these commands in your local project terminal:',
+      title: '3. Push Code to github.com/anshig781-maker',
+      content: 'Run these commands in your project terminal to link and push your code:',
       code: `git init
 git add .
 git commit -m "feat: complete Aanshi Gupta portfolio website"
 git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
+git remote add origin https://github.com/anshig781-maker/portfolio.git
 git push -u origin main`,
     },
     {
       id: 'step4',
-      title: '4. Enable GitHub Pages with GitHub Actions',
+      title: '4. Enable GitHub Pages via GitHub Actions',
       content:
-        'On your GitHub repository page: Navigate to Settings → Pages → Under "Build and deployment" Source, select "GitHub Actions". The pre-configured `.github/workflows/deploy.yml` workflow will automatically build and publish your website in under 2 minutes!',
+        'Go to github.com/anshig781-maker/portfolio → Settings → Pages. Under "Build and deployment" Source, select "GitHub Actions". The included .github/workflows/deploy.yml will deploy your site to https://anshig781-maker.github.io/portfolio/ automatically!',
       code: null,
     },
     {
